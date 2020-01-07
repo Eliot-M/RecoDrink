@@ -1,0 +1,194 @@
+/* Page */
+
+html{
+  height:100%;
+  margin:0;}
+
+body{
+  height:100%;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+
+  background-repeat: no-repeat;
+  background-position : top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  padding: 0;}
+
+.bd_home{
+  background-image: url("/static/home_drink.jpg");
+  background-color: #000;}
+
+.bd_beer{
+  background-image: url("/static/img_beers.jpg");
+  background-color: #000;}
+
+
+/* Divs */
+.bd_home #intro {
+  margin-bottom: 100px;
+  margin-top: 100px;}
+
+.block{
+  background-color: #F0F0F0;
+  border: 1px solid #333333;
+  border-radius: 2px;
+  padding: 3px;}
+
+#header{ /*temporaire pour le moment*/
+  margin-bottom: 150px;}
+
+#select,
+#reco,
+#beers_taste,
+#fiche_reco,
+#content{
+  margin-bottom: 20px;}
+
+.like,
+.dislike{
+  display: inline-block;
+  vertical-align: top;
+  flex: 1;}
+
+#fiche_reco,
+#beers_taste{
+  display: flex;}
+
+
+#end {
+  margin-bottom: 250px;}
+
+  /* Page recommendation only*/
+#text_reco{
+  display: inline-block;
+  vertical-align: top;
+  width: 85%;}
+
+#nb_reco{
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  width: 12%;}
+
+#fiche_reco .one,
+#fiche_reco .two,
+#fiche_reco .three{
+  flex: 1;
+  border: 1px solid #999;}
+
+.title_card{
+  padding-top: 5px;
+  text-align: center;}
+
+.caracs_text{
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;}
+
+.caracs_abv{
+  display: inline-block;
+  vertical-align: top;
+  width: 18%;}
+
+/* Navbar */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+header{
+  background-color: #75a3a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;}
+
+header a{
+  display: inline-block;
+  flex: 1;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Raleway";
+  align-items: center;
+  color: #333;}
+
+header a:hover{
+  color: #d1e0e0;}
+
+header .logo{
+  height: 40px;
+  width: auto;}
+
+
+/* Text */
+h1,
+h2,
+h3 {
+  color: #222;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0);}
+
+p,
+span {
+  color: #222;
+  margin-left: 10px;
+  margin-right:10px;}
+
+.one .title_card .title_text{
+  font-weight: bold;
+  color: #e6c300;}
+.two .title_card .title_text{
+  font-weight: bold;
+  color: #C0C0C0;}
+.three .title_card .title_text{
+  font-weight: bold;
+  color: #cd7f32;}
+
+.beer_name,
+.beer_abv{
+  font-weight: bold;}
+
+.beer_brew{
+  font-style: italic;
+  color: #999;}
+
+/* Tables*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 2px;
+}
+th{
+  background-color: #a3c2c2;
+  color: #333;
+  text-align: center;
+}
+
+td{
+  background-color: #e0ebeb;
+  color: #555;
+}
+
+/* Footer */
+
+footer{
+  margin-top:auto;
+  background:lightcyan;
+  text-align: right;
+  font-size: 80%;
+  width: 100%;}
+
+#credits{
+  color: #999;}
+
+#credits a{
+  text-decoration: none;
+  color: #777;}
+
+#credits a:hover{
+  color: #75a3a3;}

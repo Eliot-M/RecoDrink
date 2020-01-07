@@ -1,0 +1,209 @@
+/*Background*/
+body {
+  background-image: url("/static/Cocktail_light.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* ------------------------- */
+/* Tables*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 2px;
+}
+th{
+  background-color: #a3c2c2;
+  color: #333;
+  text-align: center;
+}
+
+td{
+  background-color: #e0ebeb;
+  color: #555;
+}
+
+/* ------------------------- */
+/* Text elements */
+
+h1,h2,h3 {
+  color: #262626;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0);
+}
+
+p, span {
+color: #1a1a1a;
+margin-left: 10px;
+margin-right:10px;}
+
+.one .title_card .title_text{
+font-weight: bold;
+color: #e6c300
+}
+.two .title_card .title_text{
+font-weight: bold;
+color: #C0C0C0
+}
+.three .title_card .title_text{
+font-weight: bold;
+color: #cd7f32
+}
+
+.beer_name, .beer_abv{
+font-weight: bold;
+}
+
+.beer_brew{
+font-style: italic;
+color: #999
+}
+
+
+/* ------------------------- */
+/* Navigation bar parameters */
+#navbar {
+  overflow: hidden;
+  background-color: #75a3a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar a {
+  display: inline-block;
+  flex: 1;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Raleway";
+  align-items: center;
+  color: #333;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+#navbar a:hover {
+color: #d1e0e0;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 200px;
+}
+
+/* ------------------------- */
+/* Div parameters*/
+/* div {
+background-color: #F0F0F0;
+
+} */
+
+
+.block{
+background-color: #F0F0F0;
+border: 1px solid #333333;
+border-radius: 2px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 3px;
+padding-right: 3px;
+}
+
+#header {
+  margin-bottom: 150px;
+}
+
+#select, #reco, #beers_taste, #fiche_reco {
+margin-bottom: 20px;
+}
+
+.like, .dislike{
+display: inline-block;
+vertical-align: top;
+flex: 1;
+}
+
+#fiche_reco, #beers_taste {
+    display: flex;
+}
+
+
+#end {
+  margin-bottom: 250px;
+}
+
+
+
+/* Page recommendation only*/
+#text_reco{
+display: inline-block;
+vertical-align: top;
+width: 80%;
+}
+
+#nb_reco{
+display: inline-block;
+vertical-align: top;
+width: 18%;
+}
+
+#fiche_reco .one,
+#fiche_reco .two,
+#fiche_reco .three{
+    flex: 1;
+    border: 1px solid #999;
+}
+
+.title_card{
+padding-top: 5px;
+text-align: center;
+}
+
+.caracs_text{
+display: inline-block;
+vertical-align: top;
+width: 80%;
+}
+.caracs_abv{
+display: inline-block;
+vertical-align: top;
+width: 18%;
+}
+
+/* ------------------------- */
+/* Footer parameter*/
+#bas_page {
+  text-align: right;
+  font-size: 80%;
+  position:fixed;
+  bottom:0;
+  width: 100%;
+}
+
+#credits{
+  color: #999;
+}
+
+#credits a{
+  text-decoration: none;
+  color: #777;
+}
+#credits a:hover{
+  color: #75a3a3;
+}

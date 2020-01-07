@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WTD - Cocktail Selection</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main_cocktail.css') }}">
+</head>
+
+<body>
+
+<div id="navbar">
+        <div>
+            <a href="../"><img class="logo" src="../static/logo_beer.png" alt="logo"></a>
+        </div>
+        <div>
+            <a href="../">HOME</a>
+            <a href="../beer">BEERS</a>
+            <a href="../cocktail">COCKTAILS</a>
+        </div>
+        <div>
+            <a href="#">Login</a>
+        </div>
+    </div>
+
+<div class="block" id="header">
+    <h1>Recommandations de cocktails - WIP</h1>
+
+    <h2>Sélection des cocktails</h2>
+</div>
+
+<div class="block" id="select">
+    <p>PAGE EN COURS DE CONSTRUCTION
+        <br>
+        Merci de sélectionner quelques cocktails appréciés ou non </p>
+    <form method="GET"> <!-- A passer en post !!! -->
+        <span><select name="beer_choice">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+        </select></span>
+
+        <select name="beer_rating">
+            <option value=1 selected="selected"> J'aime</option>
+            <option value=0> Je n'aime pas</option>
+        </select>
+
+        <button type="submit" >Ajouter</button>
+
+    </form>
+</div>
+
+<div class="block" id="bas_page">
+    <HR align=center size=1 width="80%">
+    <span id="credits"> Credits image: Photo by <a target="_blank" href="https://unsplash.com/@rhett__noonan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rhett Wesley</a> on <a target="_blank" href="https://unsplash.com/">Unsplash</a></span>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

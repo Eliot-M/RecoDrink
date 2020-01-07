@@ -123,3 +123,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Remove data files (keeping only restricted ones)
+data/detail_df.csv
+data/rating_df.csv

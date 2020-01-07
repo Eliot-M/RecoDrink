@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WTD - Beer Recommandation</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+</head>
+<body class="bd_beer">
+
+{% include 'base_navbar.html' %}
+
+<div class="block" id="header">
+    <h1>Recommandations de bières</h1>
+
+    <h2>Bières recommandées</h2>
+
+</div>
+
+<div class="block" id="select">
+    <h3>Bières utilisées</h3>
+    <p>
+        Pour rappel voici les bières ayant été utilisée pour réaliser cette recommendation pour l'utilisateur {{ value_user_id }}.
+        <br>
+        Les informations utlisées sont les notes attribuées aux bières afin de les comparer aux notes des autres utilisateurs.
+        <br>
+        <br>
+        La sélection actuelle :
+    </p>
+    <ul>
+        {% for select in selection %}
+            <li>{{ select }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="block" id="fiche_reco">
+    <div class="one">
+        <div class="title_card">
+            <span class="title_text">Recommandation N°1</span>
+        </div>
+        <div class="caracs_card">
+            <div class="caracs_text">
+                <p>
+                    <span class = "beer_name">{{ top_beer['beer_name'].iloc[0] }}</span> <br>
+                    <span class = "beer_brew">{{ top_beer['brewery_name'].iloc[0] }}</span> <br>
+                    <span class = "beer_style">{{ top_beer['beer_style'].iloc[0] }}</span>
+                </p>
+            </div>
+            <div class="caracs_abv">
+                <p>
+                    <span class = "beer_abv">{{ top_beer['beer_abv'].iloc[0] }}%</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="two">
+        <div class="title_card">
+            <span class="title_text">Recommandation N°2</span>
+        </div>
+        <div class="caracs_card">
+            <div class="caracs_text">
+                <p>
+                    <span class = "beer_name">{{ top_beer['beer_name'].iloc[1] }}</span> <br>
+                    <span class = "beer_brew">{{ top_beer['brewery_name'].iloc[1] }}</span> <br>
+                    <span class = "beer_style">{{ top_beer['beer_style'].iloc[1] }}</span>
+                </p>
+            </div>
+            <div class="caracs_abv">
+                <p>
+                    <span class = "beer_abv">{{ top_beer['beer_abv'].iloc[1] }}%</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="three">
+        <div class="title_card">
+            <span class="title_text">Recommandation N°3</span>
+        </div>
+        <div class="caracs_card">
+            <div class="caracs_text">
+                <p>
+                    <span class = "beer_name">{{ top_beer['beer_name'].iloc[2] }}</span> <br>
+                    <span class = "beer_brew">{{ top_beer['brewery_name'].iloc[2] }}</span> <br>
+                    <span class = "beer_style">{{ top_beer['beer_style'].iloc[2] }}</span>
+                </p>
+            </div>
+            <div class="caracs_abv">
+                <p>
+                    <span class = "beer_abv">{{ top_beer['beer_abv'].iloc[2] }}%</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block" id="reco">
+    <div id="text_reco">
+            <p>Ensemble du top des bières recommandées: </p>
+    </div>
+    <div id="nb_reco">
+        <form method="POST">
+            <span><br>
+                <select name="top_return">
+                    {% if displayed_rows == 20 %}
+                    <option value=5>5</option>
+                    <option value=10>10</option>
+                    <option value=20 selected="selected">20</option>
+                    {% elif displayed_rows == 10 %}
+                    <option value=5>5</option>
+                    <option value=10 selected="selected">10</option>
+                    <option value=20>20</option>
+                    {% else %}
+                    <option value=5>5</option>
+                    <option value=10>10</option>
+                    <option value=20>20</option>
+                    {% endif %}
+                </select>
+
+                <button type="submit" >Mettre à jour</button>
+            </span>
+        </form>
+    </div>
+    <div id="table_reco">
+        <span>
+            {% for table in tables %}
+                {{ table|safe }}
+            {% endfor %}
+        </span>
+    </div>
+
+
+
+</div>
+
+<div class="block" id="end">
+    <p>Retourner faire une sélection de bières: </p>
+    <span><button type="button" onclick="window.location.href='{{ url_for('selecting_beers') }}';">Go!</button></span>
+</div>
+
+<footer class="block" id="bas_page">
+    <HR align=center size=1 width="80%">
+    <span id="credits"> Credits image: Photo by <a target="_blank" href="https://unsplash.com/@rhett__noonan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rhett Wesley</a> on <a target="_blank" href="https://unsplash.com/">Unsplash</a></span>
+</footer>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+</script>
+
+</body>
+</html>
+
+

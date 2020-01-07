@@ -1,0 +1,21 @@
+,beer_brew_name,brewery_name,beer_style,beer_name,beer_abv,unique_id,review_overall_mean
+0,Amstel Light (Amstel Brouwerij B. V.),Amstel Brouwerij B. V.,Light Lager,Amstel Light,3.5,1,2.668181818181818
+1,Rauch Ür Bock (Caldera Brewing Company),Caldera Brewing Company,Rauchbier,Rauch Ür Bock,7.4,2,4.175
+2,Caldera Pale Ale (Caldera Brewing Company),Caldera Brewing Company,American Pale Ale (APA),Caldera Pale Ale,5.5,3,3.971875
+3,Vas Deferens Ale (Caldera Brewing Company),Caldera Brewing Company,Belgian Strong Dark Ale,Vas Deferens Ale,8.1,4,3.6
+4,Caldera IPA (Caldera Brewing Company),Caldera Brewing Company,American IPA,Caldera IPA,6.1,5,4.047297297297297
+5,The Captain's Porter (Moon River Brewing Company),Moon River Brewing Company,American Porter,The Captain's Porter,6.0,6,4.033333333333333
+6,Hoppin' To Heaven IPA (Hoppin' Frog Brewery),Hoppin' Frog Brewery,American IPA,Hoppin' To Heaven IPA,6.8,7,3.8640776699029127
+7,Hopportunity Knocks (Caldera Brewing Company),Caldera Brewing Company,American IPA,Hopportunity Knocks,6.8,8,3.543859649122807
+8,Ashland Amber (Caldera Brewing Company),Caldera Brewing Company,American Amber / Red Ale,Ashland Amber,5.4,9,3.8125
+9,Barrel Aged B.O.R.I.S. Oatmeal Imperial Stout (Hoppin' Frog Brewery),Hoppin' Frog Brewery,Russian Imperial Stout,Barrel Aged B.O.R.I.S. Oatmeal Imperial Stout,9.4,10,4.131510416666667
+10,Hefeweizen (Yazoo Brewing Company),Yazoo Brewing Company,Hefeweizen,Hefeweizen,5.0,11,3.811111111111111
+11,Amstel Lager (Amstel Brouwerij B. V.),Amstel Brouwerij B. V.,Euro Pale Lager,Amstel Lager,5.0,12,2.8275862068965516
+12,Swamp Fox IPA (Moon River Brewing Company),Moon River Brewing Company,American IPA,Swamp Fox IPA,5.8,13,3.7375
+13,Wee Beast (Cuillin Beast) (Isle Of Skye Brewery),Isle Of Skye Brewery,Scotch Ale / Wee Heavy,Wee Beast (Cuillin Beast),7.0,14,3.641891891891892
+14,Founders Cerise (Founders Brewing Company),Founders Brewing Company,Fruit / Vegetable Beer,Founders Cerise,6.5,15,3.6715176715176714
+15,American Pale Ale (Bluegrass Brewing Co.),Bluegrass Brewing Co.,American Pale Ale (APA),American Pale Ale,5.79,16,3.671875
+16,Black Cuillin (Isle Of Skye Brewery),Isle Of Skye Brewery,Scottish Ale,Black Cuillin,4.5,17,3.84375
+17,Founders Red's Rye PA (Founders Brewing Company),Founders Brewing Company,Rye Beer,Founders Red's Rye PA,6.6,18,4.199779249448124
+18,Gulden Fraug Belgian Style Ale (Hoppin' Frog Brewery),Hoppin' Frog Brewery,Belgian Strong Pale Ale,Gulden Fraug Belgian Style Ale,10.5,19,3.377551020408163
+19,Turbo Shandy (Hoppin' Frog Brewery),Hoppin' Frog Brewery,Fruit / Vegetable Beer,Turbo Shandy,7.0,20,3.59375

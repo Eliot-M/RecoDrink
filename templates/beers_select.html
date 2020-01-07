@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WTD - Beer Selection</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+</head>
+
+<body class="bd_beer">
+
+{% include 'base_navbar.html' %}
+
+<div class="block" id="header">
+    <h1>Recommandations de bières</h1>
+
+    <h2>Sélection des bières</h2>
+
+</div>
+
+
+<div class="block" id="select">
+    <p>Merci de sélectionner quelques bières et les notes associées</p>
+    <form method="POST">
+        <span><select name="beer_choice">
+            {% for beer_name in data %}
+            <option value="{{ beer_name }}">{{ beer_name }}</option>
+            {% endfor %}
+        </select></span>
+
+        <select name="beer_rating">
+            <option value=1>1 - Mauvaise</option>
+            <option value=2>2 - Pas appréciée</option>
+            <option value=3 selected="selected">3 - avis mitigé</option>
+            <option value=4>4 - Bonne</option>
+            <option value=5>5 - Excellente</option>
+        </select>
+
+        <button type="submit" >Ajouter</button>
+
+    </form>
+</div>
+
+<div class="block" id="beers_taste">
+    <div class="like">
+        <p><strong>Bières appréciées : </strong></p>
+        <ul>
+        {% for beer, rating in selection %}
+            {% if rating == 5 %}
+                <li>&#11088&#11088&#11088&#11088&#11088 {{ beer }} </li>
+            {% elif rating == 4 %}
+                <li>&#11088&#11088&#11088&#11088&#9734 {{ beer }} </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="dislike">
+        <p><strong>Bières peu ou pas appréciées : </strong></p>
+        <ul>
+        {% for beer, rating in selection %}
+            {% if rating == 3 %}
+                <li>&#11088&#11088&#11088&#9734&#9734 {{ beer }} </li>
+            {% elif rating == 2 %}
+                <li>&#11088&#11088&#9734&#9734&#9734 {{ beer }} </li>
+            {% elif rating == 1 %}
+                <li>&#11088&#9734&#9734&#9734&#9734 {{ beer }} </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+<div class="block" id="end">
+    <form method="POST">
+        {% if reco != 0 %}
+        <p>Nombre de bières sélectionnées : {{ reco }}.</p>
+        <br>
+        <span><button type="button" onclick="window.location.href='{{ url_for('recommending_beers') }}';">Faire une recommendation</button></span>
+        {% elif reco == 0 %}
+        <p>...En attente de sélection...</p>
+        {% endif %}
+    </form>
+</div>
+
+<footer class="block" id="bas_page">
+    <HR align=center size=1 width="80%">
+    <span id="credits"> Credits image: Photo by <a target="_blank" href="https://unsplash.com/@rhett__noonan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rhett Wesley</a> on <a target="_blank" href="https://unsplash.com/">Unsplash</a></span>
+</footer>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+</script>
+
+</body>
+</html>
+
+

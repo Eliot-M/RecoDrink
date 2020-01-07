@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WTD - Home</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+</head>
+<body class="bd_home">
+
+{% include 'base_navbar.html' %}
+
+<div class="block" id="intro">
+    <h1>What to drink ? </h1>
+    <h2>Trouver l'inspiration pour l'apéro</h2>
+</div>
+
+<div class="block" id="content">
+    <p>
+        Cette web-app est un projet personnel à but non-lucratif.
+        <br>
+        Elle a pour but de recommander des bières et des cocktails à partir des saisies d'un utilisateur.
+        <br>
+        Pour tester les recommandations, cliquer sur les onglets en tête de page.
+        <br><br>
+        Les bières sont recommandées selon un processus de collaborative filtering et les cocktails selon un système de recommandation "item-based".
+        <br>
+        L'ensemble de ce projet est stocké sur mon <a target="_blank" href="https://github.com/Eliot-M/">GitHub</a>. Plus d'informations dans l'onglet "<a href="../about">About</a>".
+        <br><br>
+        Bonne dégustation !
+    </p>
+</div>
+
+<footer class="block" id="bas_page">
+    <HR align=center size=1 width="80%">
+    <span id="credits"> Credits image: Photo by <a target="_blank" href="https://unsplash.com/@shootervision?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kevin Kelly</a> on <a target="_blank" href="https://unsplash.com/">Unsplash</a></span>
+</footer>
+
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+</body>
+</html>
